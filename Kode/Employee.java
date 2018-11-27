@@ -2,17 +2,13 @@ import java.util.*;
 import java.io.*;
 
 public class Employee {
-<<<<<<< HEAD
-   
-   
-   
-=======
+
 
    private String read;
    ArrayList<String> medlemmer = new ArrayList<String>();
    File file1 = new File("konkurrence_swimmer.txt");
    File file2 = new File("swimmer.txt");
->>>>>>> 95da241687ead01a88f98ae7bec7113dc9544273
+
 
    public void seMedlemmer() throws FileNotFoundException{
       Scanner s1 = new Scanner(file1);
