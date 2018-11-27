@@ -1,4 +1,4 @@
-public class Kasserer {
+public class Kasserer extends Employee{
 
 
 

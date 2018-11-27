@@ -1,4 +1,4 @@
-public class Formand {
+public class Formand extends Employee{
 
 
 
