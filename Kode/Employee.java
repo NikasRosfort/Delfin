@@ -3,7 +3,6 @@ import java.io.*;
 
 public class Employee {
 
-
    private String read;
    ArrayList<String> medlemmer = new ArrayList<String>();
    File file1 = new File("konkurrence_swimmer.txt");
