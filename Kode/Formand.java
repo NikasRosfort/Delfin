@@ -28,7 +28,10 @@ public class Formand extends Employee{
          APP = "passive";
       }
       System.out.println("Rember to give new member payment information and price");
-      
+      System.out.println("Youth swimmers (under 18 years): 1000,- yearly, senior swimmers (18 and over): 1600,- yearly.");
+      System.out.println("Members over 60 get a 25% discount.");
+      System.out.println("Passive members pay 500,- yearly.");
+   
       PrintStream outPrint = new PrintStream(new FileOutputStream(file2, true));   
       outPrint.println(name + "," + birth + "," + mail + "," + phone + "," + APP);
    
