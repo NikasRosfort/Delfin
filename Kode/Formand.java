@@ -63,9 +63,12 @@ public class Formand extends Employee{
       PrintStream outPrint3 = new PrintStream(new FileOutputStream(file3, true));   
       outPrint3.println(name);
       outPrint3.println(":");
+<<<<<<< HEAD
       
       PrintStream outPrint9 = new PrintStream(new FileOutputStream(file5, true));
       outPrint9.println("999");
+=======
+>>>>>>> b634ff0c706e9ca6642685e2fd36e42c8386f5e6
    }
    
    public void redigerMedlem() throws FileNotFoundException{
