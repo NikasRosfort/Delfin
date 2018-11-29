@@ -84,12 +84,14 @@ public class Formand extends Employee{
       //Den splitter linjerne op og tester om navnet passer
       //så splitter den den rigtig linje op igen 
       //så vælger du hvad du vil ændre og ændre det og så skriver den det ind i filen igen
-      int f = 0;
+      int f = 1;
       for(int q = 0; q<medList.length; q++){
-         String firstSpllit[] = medList[q].split(",");
-         f++;  
+         String firstSpllit[] = medList[q].split(","); 
          if(firstSpllit[0].equals(name)){
-            q = medList.length;  
+            break;  
+         }
+         else{
+            f++;
          }
       }
       
@@ -111,7 +113,7 @@ public class Formand extends Employee{
    
    }
    
- public void redigerKonku() throws FileNotFoundException{
+   public void redigerKonku() throws FileNotFoundException{
       
       Scanner s1 = new Scanner(file1);
       System.out.println("Type the full name you want to edit");
@@ -135,12 +137,14 @@ public class Formand extends Employee{
       //Den splitter linjerne op og tester om navnet passer
       //så splitter den den rigtig linje op igen 
       //så vælger du hvad du vil ændre og ændre det og så skriver den det ind i filen igen
-      int f = 0;
+      int f = 1;
       for(int q = 0; q<medList.length; q++){
-         String firstSpllit[] = medList[q].split(",");
-         f++;  
+         String firstSpllit[] = medList[q].split(",");  
          if(firstSpllit[0].equals(name)){
-            q = medList.length;  
+            break;  
+         }
+         else{
+         f++;
          }
       }
       
@@ -162,6 +166,109 @@ public class Formand extends Employee{
    
    }
 
+   public void sletMedlem() throws FileNotFoundException{
+      
+      Scanner s2 = new Scanner(file2);
+      System.out.println("Type the full name you want to delete");
+      String name = s.nextLine();
+      int i = 0;
+      
+      while(s2.hasNextLine()){
+         i++;
+         String placeholder = s2.nextLine();
+      }
+      String[] medList = new String[i];
+      s2.close();
+      
+      Scanner ss2 = new Scanner(file2);
+      
+      for(int p = 0; p<medList.length; p++){
+         medList[p] = ss2.nextLine();
+      }
+      ss2.close();
+      
+      //Den splitter linjerne op og tester om navnet passer
+      //så splitter den den rigtig linje op igen 
+      //så vælger du hvad du vil ændre og ændre det og så skriver den det ind i filen igen
+      int f = 1;
+      for(int q = 0; q<medList.length; q++){
+         String firstSpllit[] = medList[q].split(",");  
+         if(firstSpllit[0].equals(name)){
+            break;  
+         }
+         else{
+            f++;
+         }
+      }
+      
+      ArrayList<String> tester = new ArrayList<String>();
+      
+      for(int z = 0; z<medList.length; z++){
+         tester.add(medList[z]);
+      }
+      
+      tester.remove((f-1));
+      
+      PrintStream outPrint11 = new PrintStream(file2); 
+      for(int l = 0; l<tester.size(); l++){
+         outPrint11.println(tester.get(l));
+      }
+   
+   }
+
+   public void sletKonku() throws FileNotFoundException{
+      
+      Scanner s1 = new Scanner(file1);
+      System.out.println("Type the full name you want to delete");
+      String name = s.nextLine();
+      int i = 0;
+      
+      while(s1.hasNextLine()){
+         i++;
+         String placeholder = s1.nextLine();
+      }
+      String[] medList = new String[i];
+      s1.close();
+      
+      Scanner ss1 = new Scanner(file1);
+      
+      for(int p = 0; p<medList.length; p++){
+         medList[p] = ss1.nextLine();
+      }
+      ss1.close();
+      
+      //Den splitter linjerne op og tester om navnet passer
+      //så splitter den den rigtig linje op igen 
+      //så vælger du hvad du vil ændre og ændre det og så skriver den det ind i filen igen
+      int f = 1;
+      for(int q = 0; q<medList.length; q++){
+         String firstSpllit[] = medList[q].split(",");  
+         if(firstSpllit[0].equals(name)){
+            break;  
+         }
+         else{
+            f++;
+         }
+      }
+      
+      ArrayList<String> tester = new ArrayList<String>();
+      
+      for(int z = 0; z<medList.length; z++){
+         tester.add(medList[z]);
+      }
+      
+      tester.remove((f-1));
+      
+      PrintStream outPrint11 = new PrintStream(file1); 
+      for(int l = 0; l<tester.size(); l++){
+         outPrint11.println(tester.get(l));
+      }
+   
+   }
+
+   
+   
+   
    
 
 }
