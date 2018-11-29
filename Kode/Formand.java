@@ -226,31 +226,25 @@ public class Formand extends Employee{
       //henter fra file4 aka kontigent.txt
       //lægger i et array
       Scanner s4 = new Scanner(file4);
-      int g = 0;
-      
-      while(s4.hasNextLine()){
-         g++;
-         String placeholder = s4.nextLine();
-      }
-      String[] pengeList = new String[g];
+      String[] pengeList = new String[i];
       s4.close();
       
       Scanner ss4 = new Scanner(file4);
       
       for(int p = 0; p<pengeList.length; p++){
-         medList[p] = ss4.nextLine();
+         pengeList[p] = ss4.nextLine();
       }
       ss4.close();
    
       //laver det om til en arrayList
       ArrayList<String> PAL = new ArrayList<String>();
       
-      for(int z = 0; z<medList.length; z++){
-         PAL.add(medList[z]);
+      for(int z = 0; z<pengeList.length; z++){
+         PAL.add(pengeList[z]);
       }
       
       //fjerner den valgte fra arrayListen
-      tester.remove((f-1));
+      PAL.remove((f-1));
       
       //printer et ind igeni file4
       PrintStream outPrint111 = new PrintStream(file4); 
