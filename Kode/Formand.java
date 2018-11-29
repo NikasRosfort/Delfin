@@ -58,7 +58,6 @@ public class Formand extends Employee{
       PrintStream outPrint3 = new PrintStream(new FileOutputStream(file3, true));   
       outPrint3.println(name);
       outPrint3.println(":");
-      //outPrint3.println("00:00:00-DD/MM/YYYY,00:00:00-DD/MM/YYYY,00:00:00-DD/MM/YYYY,00:00:00-DD/MM/YYYY,00:00:00-DD/MM/YYYY,00:00:00-DD/MM/YYYY,00:00:00-DD/MM/YYYY,00:00:00-DD/MM/YYYY,00:00:00-DD/MM/YYYY");
    }
    
    public void redigerMedlem() throws FileNotFoundException{
@@ -114,7 +113,7 @@ public class Formand extends Employee{
    
    }
    
-   public void redigerKonku() throws FileNotFoundException{
+   public void redigerKonkSwim() throws FileNotFoundException{
       
       Scanner s1 = new Scanner(file1);
       System.out.println("Type the full name you want to edit");
@@ -217,7 +216,7 @@ public class Formand extends Employee{
    
    }
 
-   public void sletKonku() throws FileNotFoundException{
+   public void sletKonkSwim() throws FileNotFoundException{
       
       Scanner s1 = new Scanner(file1);
       System.out.println("Type the full name you want to delete");
