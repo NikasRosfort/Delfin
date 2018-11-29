@@ -1,3 +1,0 @@
-a,15/12/1910,fuckDig@hotmail.com,88888888,activ
-b,15/12/1910,fuckDig@hotmail.com,88888888,activ
-d,15/12/1910,fuckDig@hotmail.com,88888888,activ

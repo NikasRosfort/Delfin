@@ -6,6 +6,8 @@ public class Formand extends Employee{
    File file1 = new File("konkurrence_swimmer.txt");
    File file2 = new File("swimmer.txt");
    File file3 = new File("swimmer_times.txt");
+   File file4 = new File("kontigent.txt");
+   File file5 = new File("kontigentKonk.txt");
 
    Scanner s = new Scanner(System.in);
    String APP;
@@ -35,6 +37,9 @@ public class Formand extends Employee{
    
       PrintStream outPrint2 = new PrintStream(new FileOutputStream(file2, true));   
       outPrint2.println(name + "," + birth + "," + mail + "," + phone + "," + APP);
+      
+      PrintStream outPrint9 = new PrintStream(new FileOutputStream(file4, true));
+      outPrint9.println("999");
    }
    
    
@@ -58,7 +63,9 @@ public class Formand extends Employee{
       PrintStream outPrint3 = new PrintStream(new FileOutputStream(file3, true));   
       outPrint3.println(name);
       outPrint3.println(":");
-      //outPrint3.println("00:00:00-DD/MM/YYYY,00:00:00-DD/MM/YYYY,00:00:00-DD/MM/YYYY,00:00:00-DD/MM/YYYY,00:00:00-DD/MM/YYYY,00:00:00-DD/MM/YYYY,00:00:00-DD/MM/YYYY,00:00:00-DD/MM/YYYY,00:00:00-DD/MM/YYYY");
+      
+      PrintStream outPrint9 = new PrintStream(new FileOutputStream(file5, true));
+      outPrint9.println("999");
    }
    
    public void redigerMedlem() throws FileNotFoundException{
@@ -114,7 +121,7 @@ public class Formand extends Employee{
    
    }
    
-   public void redigerKonku() throws FileNotFoundException{
+   public void redigerKonkSwim() throws FileNotFoundException{
       
       Scanner s1 = new Scanner(file1);
       System.out.println("Type the full name you want to edit");
@@ -145,7 +152,7 @@ public class Formand extends Employee{
             break;  
          }
          else{
-         f++;
+            f++;
          }
       }
       
@@ -214,10 +221,47 @@ public class Formand extends Employee{
       for(int l = 0; l<tester.size(); l++){
          outPrint11.println(tester.get(l));
       }
+      
+      //henter fra file4 aka kontigent.txt
+      //lægger i et array
+      Scanner s4 = new Scanner(file4);
+      int g = 0;
+      
+      while(s4.hasNextLine()){
+         g++;
+         String placeholder = s4.nextLine();
+      }
+      String[] pengeList = new String[g];
+      s4.close();
+      
+      Scanner ss4 = new Scanner(file4);
+      
+      for(int p = 0; p<pengeList.length; p++){
+         medList[p] = ss4.nextLine();
+      }
+      ss4.close();
+   
+      //laver det om til en arrayList
+      ArrayList<String> PAL = new ArrayList<String>();
+      
+      for(int z = 0; z<medList.length; z++){
+         PAL.add(medList[z]);
+      }
+      
+      //fjerner den valgte fra arrayListen
+      tester.remove((f-1));
+      
+      //printer et ind igeni file4
+      PrintStream outPrint111 = new PrintStream(file4); 
+      for(int l = 0; l<PAL.size(); l++){
+         outPrint111.println(PAL.get(l));
+      }
+   
+   
    
    }
 
-   public void sletKonku() throws FileNotFoundException{
+   public void sletKonkSwim() throws FileNotFoundException{
       
       Scanner s1 = new Scanner(file1);
       System.out.println("Type the full name you want to delete");
@@ -264,6 +308,43 @@ public class Formand extends Employee{
       for(int l = 0; l<tester.size(); l++){
          outPrint11.println(tester.get(l));
       }
+   
+      //henter fra file5 aka kontigentKonk.txt
+      //lægger i et array
+      Scanner s5 = new Scanner(file5);
+      int g = 0;
+      
+      while(s5.hasNextLine()){
+         g++;
+         String placeholder = s5.nextLine();
+      }
+      String[] pengeList = new String[g];
+      s5.close();
+      
+      Scanner ss5 = new Scanner(file5);
+      
+      for(int p = 0; p<pengeList.length; p++){
+         medList[p] = ss5.nextLine();
+      }
+      ss5.close();
+   
+      //laver det om til en arrayList
+      ArrayList<String> PAL = new ArrayList<String>();
+      
+      for(int z = 0; z<medList.length; z++){
+         PAL.add(medList[z]);
+      }
+      
+      //fjerner den valgte fra arrayListen
+      tester.remove((f-1));
+      
+      //printer et ind igeni file5
+      PrintStream outPrint111 = new PrintStream(file5); 
+      for(int l = 0; l<PAL.size(); l++){
+         outPrint111.println(PAL.get(l));
+      }
+   
+   
    
    }
 
