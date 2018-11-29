@@ -1,4 +1,4 @@
 a,15/12/1910,fuckDig@hotmail.com,88888888,activ
-b,15/12/1910,fuckDig@hotmail.com,88888888,activ
-c,15/12/1910,fuckDig@hotmail.com,88888888,activ
+b,01/01/0001,1@mail.dk,88888888,activ
+Nummer c,DD/MM/YYYY,BLABLA@hotmail.com,88888888,pasiv
 d,15/12/1910,fuckDig@hotmail.com,88888888,activ
