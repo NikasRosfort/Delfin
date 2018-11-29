@@ -63,12 +63,10 @@ public class Formand extends Employee{
       PrintStream outPrint3 = new PrintStream(new FileOutputStream(file3, true));   
       outPrint3.println(name);
       outPrint3.println(":");
-<<<<<<< HEAD
       
       PrintStream outPrint9 = new PrintStream(new FileOutputStream(file5, true));
       outPrint9.println("999");
-=======
->>>>>>> b634ff0c706e9ca6642685e2fd36e42c8386f5e6
+
    }
    
    public void redigerMedlem() throws FileNotFoundException{
@@ -312,34 +310,30 @@ public class Formand extends Employee{
          outPrint11.println(tester.get(l));
       }
    
+   
       //henter fra file5 aka kontigentKonk.txt
       //lægger i et array
       Scanner s5 = new Scanner(file5);
-      int g = 0;
-      
-      while(s5.hasNextLine()){
-         g++;
-         String placeholder = s5.nextLine();
-      }
-      String[] pengeList = new String[g];
+
+      String[] pengeList = new String[i];
       s5.close();
       
       Scanner ss5 = new Scanner(file5);
       
       for(int p = 0; p<pengeList.length; p++){
-         medList[p] = ss5.nextLine();
+         pengeList[p] = ss5.nextLine();
       }
       ss5.close();
    
       //laver det om til en arrayList
       ArrayList<String> PAL = new ArrayList<String>();
       
-      for(int z = 0; z<medList.length; z++){
-         PAL.add(medList[z]);
+      for(int z = 0; z<pengeList.length; z++){
+         PAL.add(pengeList[z]);
       }
       
       //fjerner den valgte fra arrayListen
-      tester.remove((f-1));
+      PAL.remove((f-1));
       
       //printer et ind igeni file5
       PrintStream outPrint111 = new PrintStream(file5); 
