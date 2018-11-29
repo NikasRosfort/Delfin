@@ -57,6 +57,7 @@ public class Formand extends Employee{
       
       PrintStream outPrint3 = new PrintStream(new FileOutputStream(file3, true));   
       outPrint3.println(name);
+      outPrint3.println(":");
       //outPrint3.println("00:00:00-DD/MM/YYYY,00:00:00-DD/MM/YYYY,00:00:00-DD/MM/YYYY,00:00:00-DD/MM/YYYY,00:00:00-DD/MM/YYYY,00:00:00-DD/MM/YYYY,00:00:00-DD/MM/YYYY,00:00:00-DD/MM/YYYY,00:00:00-DD/MM/YYYY");
    }
    
