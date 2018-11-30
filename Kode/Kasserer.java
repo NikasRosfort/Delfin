@@ -170,23 +170,12 @@ public class Kasserer extends Employee{
    
    }
 
+   public void seKontingent() {
+      System.out.println("Youth swimmers (under 18 years): 1000,- yearly, senior swimmers (18 and over): 1600,- yearly.");
+      System.out.println("Members over 60 get a 25% discount.");
+      System.out.println("Passive membership is 500,- yearly");
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+   }
 
 
 
