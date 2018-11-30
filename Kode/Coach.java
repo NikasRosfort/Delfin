@@ -77,7 +77,7 @@ public class Coach extends Employee{
          }
          String secondSpllit[] = edi[(f-1)].split(",");
          
-         System.out.println("Type the new time\tmin:sek:mlsek");
+         System.out.println("Type the new time\t example: sek.mlsek  - 12.20");
          String midl = s.nextLine();
          secondSpllit[1] = midl;
          person.set((f-1), secondSpllit[0] + "," + secondSpllit[1]); 
@@ -90,7 +90,7 @@ public class Coach extends Employee{
             System.out.println("Type the disiplin and length");
             String dp = s.nextLine();
             dp = s.nextLine();
-            System.out.println("Type the time\tmin:sek:mlsek");
+            System.out.println("Type the time\t example: sek.mlsek  - 12.20");
             String time = s.nextLine();
             person.add(0, dp + "," + time);
          }
@@ -100,7 +100,7 @@ public class Coach extends Employee{
             loc = s.nextLine();
             System.out.println("Type the disiplin and length");
             String dp = s.nextLine();
-            System.out.println("Type the time\tmin:sek:mlsek");
+            System.out.println("Type the time\t example: sek.mlsek  - 12.20");
             String time = s.nextLine();
             System.out.println("Type the number of the swimmers placement");
             String place = s.nextLine();
@@ -147,7 +147,132 @@ public class Coach extends Employee{
       }
    }
    
-
+   public void topFem() throws FileNotFoundException{
+      
+      
+      System.out.println("Type the disiplin and lenth you want to see top 5\t\texample: bryst 200m");
+      String top5 = s.nextLine();  
+   /*
+      Scanner ss3 = new Scanner(file3);
+      ArrayList<String> fix = new ArrayList<String>();
+      while(ss3.hasNextLine()){
+         String fuck = ss3.nextLine();
+         fix.add(fuck);
+      }
+   */
+        
+   
+   
+   
+      Scanner s3 = new Scanner(file3);
+      ArrayList<String> list = new ArrayList<String>();
+      
+      
+      
+      while(s3.hasNextLine()){
+         String name = s3.nextLine();
+         while(s3.hasNextLine()){
+            String wait = s3.nextLine();
+            String firstSplit[] = wait.split(",");
+            if(firstSplit[0].equals(top5)){
+               list.add(name);
+               list.add(wait);
+            }
+            if(wait.equals(":")){
+               break; 
+            } 
+         }
+      }
+      
+      String midAr[] = new String[list.size()];
+      
+      for(int p = 0; p<midAr.length; p++){
+         midAr[p] = list.get(p);
+      }
+         
+      String[] lort = new String[midAr.length];
+      String[] lort2 = new String[9999];
+      ArrayList<Integer> fisk = new ArrayList<Integer>();
+         
+         //
+         /*
+         
+      for(int l = 1; l<midAr.length; l = l + 2){
+         lort = midAr[l].split(",");
+         String peter = lort[1];
+         lort2 = peter.split(":");
+         fisk.add(Integer.parseInt(lort2[0]));
+         fisk.add(Integer.parseInt(lort2[1]));
+         fisk.add(Integer.parseInt(lort2[2]));
+      }
+         
+      int m19 = 999999;
+      int m18 = 999999;
+      int m17 = 999999;
+      
+      int m29 = 99999;
+      int m28 = 999999;
+      int m27 = 999999;
+      
+      int m39 = 99999;
+      int m38 = 999999;
+      int m37 = 999999;
+      
+      int m49 = 99999;
+      int m48 = 999999;
+      int m47 = 999999;
+      
+      int m59 = 999999;
+      int m58 = 999999;
+      int m57 = 999999;
+         
+      for(int w = 0; w<fisk.size(); w=w+3){
+         int test1 = fisk.get(w);
+         int test2 = fisk.get((w+1));
+         int test3 = fisk.get((w+2));
+         if(test1<m19){
+            m59 = m49;
+            m49 = m39;
+            m39 = m29;
+            m29 = m19;
+            m19 = test1;
+            
+            m58 = m48;
+            m48 = m38;
+            m38 = m28;
+            m28 = m18;
+            m18 = test2;
+            
+            m57 = m47;
+            m47 = m37;
+            m37 = m27;
+            m27 = m17;
+            m17 = test3;
+            
+         }
+      }
+      System.out.println(m19 + "¤" + m18 + "¤" + m17);
+      System.out.println(m29 + "¤" + m28 + "¤" + m27);
+      System.out.println(m39 + "¤" + m38 + "¤" + m37);
+      System.out.println(m49 + "¤" + m48 + "¤" + m47);
+      System.out.println(m59 + "¤" + m58 + "¤" + m57);
+         */
+         /*
+         for(int w = 0; w<fisk.size(); w=w+3){
+         System.out.println(fisk.get(w)+"#"+fisk.get((w+1))+"#"+fisk.get((w+2)));
+         }
+         */
+         
+      
+      
+      
+      
+      
+      for(int y = 0; y<list.size();y++){
+         System.out.println(list.get(y));
+      }
+      
+   }
 
 
 

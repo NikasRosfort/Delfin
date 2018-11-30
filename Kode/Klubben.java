@@ -5,7 +5,7 @@ public class Klubben {
    Formand test = new Formand();
    Kasserer kas = new Kasserer();
    Coach coa = new Coach();
-   coa.editKonkResult();
+   coa.topFem();
    
    }
 
