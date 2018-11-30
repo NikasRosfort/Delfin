@@ -1,21 +1,20 @@
 Jesper ravn
-bryst 100m,00:00:00,DD/MM/YYYY
-bryst 200m,00:00:00,DD/MM/YYYY
-ryg 400m,00:00:00,DD/MM/YYYY
-1. plads,00:00:00,DD/MM/YYYY
-4. plads,00:00:00,DD/MM/YYYY
+bryst 100m,00:00:00
+bryst 200m,00:00:00
+ryg 400m,00:00:00
+by,bryst 200m,1. plads,00:00:00
+by,bryst 200m,1. plads,00:00:00
 :
 peter
 :
 a
+roskilde open,bryst 200m,99:99:99,3. plads,
 :
 b
 :
 b
 :
-a
 :
-a
 :
 b
 :
