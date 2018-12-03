@@ -8,6 +8,7 @@ public class Klubben {
    
       Scanner s = new Scanner(System.in);
       while(loop == 0){
+         System.out.println("********************************\nWrite everthing in small letters\n********************************\n");
          System.out.println("Type your password or type \"exit\" to close");
          String password = s.next();
          
@@ -18,7 +19,7 @@ public class Klubben {
          if(password.equals("exit")){
             loop = 1;
          }
-      
+         
          else if(password.equals("master")){
             while(loopf == 0){
                Formand formand = new Formand();
@@ -114,25 +115,29 @@ public class Klubben {
             Coach coa = new Coach();
             
             while(loopc == 0){
-            System.out.println("Type 1 to see all memberships, type 2 too see all results, type 3 for training and competition times, type 4 see top 5 swimmers or type 0 to log out");
-            int pick2 = s.nextInt();
-            if(pick2 == 0){
-               loopc = 1;
-            }
-            else if(pick2 == 1){
-               coa.seMedlemmer();
-            }
-            else if(pick2 == 2){
-               coa.seKonkResult();
-            }
-            else if(pick2 == 3){
-               coa.editKonkResult();
-            }
-            else if(pick2 == 4){}
-               coa.topFem();
+               System.out.println("Type 1 to see all memberships, type 2 too see all results, type 3 for training and competition times, type 4 see top 5 swimmers or type 0 to log out");
+               int pick2 = s.nextInt();
+               if(pick2 == 0){
+                  loopc = 1;
+               }
+               else if(pick2 == 1){
+                  coa.seMedlemmer();
+               }
+               else if(pick2 == 2){
+                  coa.seKonkResult();
+               }
+               else if(pick2 == 3){
+                  coa.editKonkResult();
+               }
+               else if(pick2 == 4){
+                  coa.topFem();
+               }
+               
             }
          }
-      
+         else {
+            System.out.println("Wrong password, please try again\n");
+         }
       }
    
    }

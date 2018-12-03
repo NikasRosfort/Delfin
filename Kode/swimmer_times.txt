@@ -9,6 +9,7 @@ peter
 bryst 100m,1.1
 :
 a
+bryst 400m,33.23
 bryst 100m,2.2
 roskilde open,bryst 200m,0.0,3. plads,
 :
