@@ -149,25 +149,13 @@ public class Coach extends Employee{
    
    public void topFem() throws FileNotFoundException{
       
-      
+      //vælger dicipin
       System.out.println("Type the disiplin and lenth you want to see top 5\t\texample: bryst 200m");
-      String top5 = s.nextLine();  
-   /*
-      Scanner ss3 = new Scanner(file3);
-      ArrayList<String> fix = new ArrayList<String>();
-      while(ss3.hasNextLine()){
-         String fuck = ss3.nextLine();
-         fix.add(fuck);
-      }
-   */
-        
+      String top5 = s.nextLine(); 
    
-   
-   
+      //laver et arrayliste med navn tid og konkurance
       Scanner s3 = new Scanner(file3);
       ArrayList<String> list = new ArrayList<String>();
-      
-      
       
       while(s3.hasNextLine()){
          String name = s3.nextLine();
@@ -175,8 +163,7 @@ public class Coach extends Employee{
             String wait = s3.nextLine();
             String firstSplit[] = wait.split(",");
             if(firstSplit[0].equals(top5)){
-               list.add(name);
-               list.add(wait);
+               list.add(name + "," + wait);
             }
             if(wait.equals(":")){
                break; 
@@ -184,96 +171,92 @@ public class Coach extends Employee{
          }
       }
       
+      //laver et nyt Array som kan splittes
       String midAr[] = new String[list.size()];
       
       for(int p = 0; p<midAr.length; p++){
          midAr[p] = list.get(p);
       }
-         
-      String[] lort = new String[midAr.length];
-      String[] lort2 = new String[9999];
-      ArrayList<Integer> fisk = new ArrayList<Integer>();
-         
-         //
-         /*
-         
-      for(int l = 1; l<midAr.length; l = l + 2){
-         lort = midAr[l].split(",");
-         String peter = lort[1];
-         lort2 = peter.split(":");
-         fisk.add(Integer.parseInt(lort2[0]));
-         fisk.add(Integer.parseInt(lort2[1]));
-         fisk.add(Integer.parseInt(lort2[2]));
+      
+      //splitter arrayet og gemmer navn og tid i hvert sin arrayListe         
+      String[] swimmerName = new String[midAr.length];
+      ArrayList<Double> sTime = new ArrayList<Double>();
+      ArrayList<String> timeName = new ArrayList<String>();
+      for(int a = 0; a<midAr.length; a++){
+         swimmerName = midAr[a].split(",");
+         sTime.add(Double.parseDouble(swimmerName[2]));
+         timeName.add(swimmerName[0]);
       }
-         
-      int m19 = 999999;
-      int m18 = 999999;
-      int m17 = 999999;
       
-      int m29 = 99999;
-      int m28 = 999999;
-      int m27 = 999999;
+      //gemmer tiderne i variabler
+      double m1 = 999999999;
+      double m2 = 999999999;
+      double m3 = 999999999;
+      double m4 = 999999999;
+      double m5 = 999999999;
+      String n1 = "Not enough swimmers";
+      String n2 = "Not enough swimmers";
+      String n3 = "Not enough swimmers";
+      String n4 = "Not enough swimmers";
+      String n5 = "Not enough swimmers";
       
-      int m39 = 99999;
-      int m38 = 999999;
-      int m37 = 999999;
-      
-      int m49 = 99999;
-      int m48 = 999999;
-      int m47 = 999999;
-      
-      int m59 = 999999;
-      int m58 = 999999;
-      int m57 = 999999;
-         
-      for(int w = 0; w<fisk.size(); w=w+3){
-         int test1 = fisk.get(w);
-         int test2 = fisk.get((w+1));
-         int test3 = fisk.get((w+2));
-         if(test1<m19){
-            m59 = m49;
-            m49 = m39;
-            m39 = m29;
-            m29 = m19;
-            m19 = test1;
+      //tester hvem der har den beste tid og sætter dem om i en top 5
+      for(int x  = 0; x<sTime.size();x++){
+         if(sTime.get(x)<m1){
+            m5 = m4;
+            m4 = m3;
+            m3 = m2;
+            m2 = m1;
+            m1 = sTime.get(x);
             
-            m58 = m48;
-            m48 = m38;
-            m38 = m28;
-            m28 = m18;
-            m18 = test2;
-            
-            m57 = m47;
-            m47 = m37;
-            m37 = m27;
-            m27 = m17;
-            m17 = test3;
-            
+            n5 = n4;
+            n4 = n3;
+            n3 = n2;
+            n2 = n1;
+            n1 = timeName.get(x) + " with the time: " + sTime.get(x) + "sek";
          }
-      }
-      System.out.println(m19 + "¤" + m18 + "¤" + m17);
-      System.out.println(m29 + "¤" + m28 + "¤" + m27);
-      System.out.println(m39 + "¤" + m38 + "¤" + m37);
-      System.out.println(m49 + "¤" + m48 + "¤" + m47);
-      System.out.println(m59 + "¤" + m58 + "¤" + m57);
-         */
-         /*
-         for(int w = 0; w<fisk.size(); w=w+3){
-         System.out.println(fisk.get(w)+"#"+fisk.get((w+1))+"#"+fisk.get((w+2)));
+         else if(sTime.get(x)<m2){
+            m5 = m4;
+            m4 = m3;
+            m3 = m2;
+            m2 = sTime.get(x);
+            
+            n5 = n4;
+            n4 = n3;
+            n3 = n2;
+            n2 = timeName.get(x) + " with the time: " + sTime.get(x) + "sek";
          }
-         */
+         else if(sTime.get(x)<m3){
+            m5 = m4;
+            m4 = m3;
+            m3 = sTime.get(x);
+            
+            n5 = n4;
+            n4 = n3;
+            n3 = timeName.get(x) + " with the time: " + sTime.get(x) + "sek";
+         }
+         else if(sTime.get(x)<m4){
+            m5 = m4;
+            m4 = sTime.get(x);
+            
+            n5 = n4;
+            n4 = timeName.get(x) + " with the time: " + sTime.get(x) + "sek";
+         }
+         else if(sTime.get(x)<m5){
+            m5 = sTime.get(x);
+            
+            n5 = timeName.get(x) + " with the time: " + sTime.get(x) + "sek";
+         }   
          
-      
-      
-      
-      
-      
-      for(int y = 0; y<list.size();y++){
-         System.out.println(list.get(y));
       }
+      
+      //printer top 5 ud  
+      System.out.println("1. " + n1);
+      System.out.println("2. " + n2);
+      System.out.println("3. " + n3);
+      System.out.println("4. " + n4);
+      System.out.println("5. " + n5);
       
    }
-
-
 
 }

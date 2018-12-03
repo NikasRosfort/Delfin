@@ -13,10 +13,11 @@ bryst 100m,2.2
 roskilde open,bryst 200m,0.0,3. plads,
 :
 b
+bryst 100m,393.9
 :
-b
+c
+bryst 100m,800
 :
-:
-:
-b
+d
+bryst 100m,78
 :
