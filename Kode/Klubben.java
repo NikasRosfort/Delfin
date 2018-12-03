@@ -32,7 +32,7 @@ public class Klubben {
                   formand.seMedlemmer();
                }
                else if(pick == 2){
-                  System.out.println("Type 1 for creat new membership, type 2 to edit member, type 3 to deleate meber or type 0 to log out");
+                  System.out.println("Type 1 for creat new membership, type 2 to edit member, type 3 to delete member or type 0 to log out");
                   int NED = s.nextInt();
                   if(NED == 0){
                      loopf = 1;
@@ -48,7 +48,7 @@ public class Klubben {
                   }
                }
                else if(pick == 3){
-                  System.out.println("Type 1 for creat new membership, type 2 to edit member, type 3 to deleate meber or type 0 to log out");
+                  System.out.println("Type 1 for creat new competition swimmer, type 2 to edit competition swimmer, type 3 to delete competition swimmer or type 0 to log out");
                   int NED1 = s.nextInt();
                   if(NED1 == 0){
                      loopf = 1;

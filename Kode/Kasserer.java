@@ -105,7 +105,7 @@ public class Kasserer extends Employee{
       int change = s.nextInt();
       res.set((f-1), change);
    
-       System.out.println("The change is updatede");
+      System.out.println("The change is updatede");
    
       PrintStream outPrint = new PrintStream(file4); 
       for(int l = 0; l<res.size(); l++){
@@ -121,6 +121,7 @@ public class Kasserer extends Employee{
       Scanner s1 = new Scanner(file1);
       System.out.println("Type the full name you want to change arrears");
       String name = s.nextLine();
+
       int i = 0;
       
       while(s1.hasNextLine()){
