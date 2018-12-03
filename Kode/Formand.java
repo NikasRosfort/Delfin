@@ -67,7 +67,7 @@ public class Formand extends Employee{
       
       PrintStream outPrint9 = new PrintStream(new FileOutputStream(file5, true));
       outPrint9.println("999");
-
+   
    }
    
    public void redigerMedlem() throws FileNotFoundException{
@@ -309,7 +309,7 @@ public class Formand extends Employee{
       //henter fra file5 aka kontigentKonk.txt
       //lægger i et array
       Scanner s5 = new Scanner(file5);
-
+   
       String[] pengeList = new String[i];
       s5.close();
       
