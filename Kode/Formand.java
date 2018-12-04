@@ -13,6 +13,7 @@ public class Formand extends Employee{
    String APP;
    String PNN;
 
+   //kan opretter et medlem og lægger informtionen ind i swimmer.txt og smider "999" i kontigent.txt så linjerne passer sammen
    public void opretMedlem() throws FileNotFoundException{
       System.out.println("Type: full name");
       String name = s.nextLine();
@@ -42,7 +43,8 @@ public class Formand extends Employee{
       outPrint9.println("999");
    }
    
-   
+   //kan opretter et medlem og lægger informtionen ind i konkurrenxe_swimmer.txt og smider "999" i kontigent.txt så linjerne passer sammen
+   //og putter deres navn ind i filen swimmer_times.txt så træneren har mulighed for at hold styr på restultater
    public void opretKonkSwim() throws FileNotFoundException{
       System.out.println("Type: full name");
       String name = s.nextLine();
@@ -69,6 +71,7 @@ public class Formand extends Employee{
       outPrint9.println("999");
    
    }
+   
    
    public void redigerMedlem() throws FileNotFoundException{
       
@@ -199,7 +202,7 @@ public class Formand extends Employee{
       
       //Den splitter linjerne op og tester om navnet passer
       //så splitter den den rigtig linje op igen 
-      //så vælger du hvad du vil ændre og ændre det og så skriver den det ind i filen igen
+      //og sletter så den rigtigt linje
       int f = 1;
       for(int q = 0; q<medList.length; q++){
          String firstSpllit[] = medList[q].split(",");  
@@ -280,7 +283,7 @@ public class Formand extends Employee{
       
       //Den splitter linjerne op og tester om navnet passer
       //så splitter den den rigtig linje op igen 
-      //så vælger du hvad du vil ændre og ændre det og så skriver den det ind i filen igen
+      //og sletter så den rigtige linje
       int f = 1;
       for(int q = 0; q<medList.length; q++){
          String firstSpllit[] = medList[q].split(",");  
@@ -330,7 +333,7 @@ public class Formand extends Employee{
       //fjerner den valgte fra arrayListen
       PAL.remove((f-1));
       
-      //printer et ind igeni file5
+      //printer et ind igen i file5
       PrintStream outPrint111 = new PrintStream(file5); 
       for(int l = 0; l<PAL.size(); l++){
          outPrint111.println(PAL.get(l));

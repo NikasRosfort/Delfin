@@ -5,6 +5,7 @@ public class Klubben {
    
       int loop = 0;
       
+      //main som giver mulighed for at kalde alle metoder alt efter hvordan du navigere dig rundt ps password is AWESOME!!!
    
       Scanner s = new Scanner(System.in);
       while(loop == 0){

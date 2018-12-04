@@ -9,6 +9,7 @@ public class Kasserer extends Employee{
    File file4 = new File("kontigent.txt");
    File file5 = new File("kontigentKonk.txt");
 
+   //finder alle talene i filen kontigent.txt som ikke er 0 og printer alle sammen ud med tilhørende information fra filen swimmer.txt
    public void seRestanceMedlem() throws FileNotFoundException{
    
       Scanner s4 = new Scanner(file4);
@@ -35,6 +36,7 @@ public class Kasserer extends Employee{
             
    }
 
+   //finder alle talene i filen kontigentKonk.txt som ikke er 0 og printer alle sammen ud med tilhørende information fra filen konkurrenxe_swimmer.txt
    public void seRestanceKonkSwim() throws FileNotFoundException{
    
       Scanner s5 = new Scanner(file5);
@@ -60,7 +62,7 @@ public class Kasserer extends Employee{
       }   
    }
 
-
+   //finder linje nummeret i filen swimmer.txt og giver så mulighed for at ændre beløbet på samme linje nummer i filen kontigent.txt
    public void retRestanceMedlem() throws FileNotFoundException{
    
       Scanner s2 = new Scanner(file2);
@@ -115,7 +117,7 @@ public class Kasserer extends Employee{
    
    }
 
-
+   //finder linje nummeret i filen konkurrence_swimmer.txt og giver så mulighed for at ændre beløbet på samme linje nummer i filen kontigentKonk.txt
    public void retRestanceKonkSwim() throws FileNotFoundException{
    
       Scanner s1 = new Scanner(file1);

@@ -6,6 +6,8 @@ public class Coach extends Employee{
    File file3 = new File("swimmer_times.txt");
    Scanner s = new Scanner(System.in);
 
+   //scanner filen swimmer_times.txt og ligger hver linje ind i en arraylisten MEN hvis linjen er ":" sætter den en tom linje ind istedet
+   //og printer så arraylisten ud
    public void seKonkResult() throws FileNotFoundException{
       Scanner s3 = new Scanner(file3);
       
@@ -26,15 +28,17 @@ public class Coach extends Employee{
       s3.close();   
    }
 
+   //giver mulighed for at ændre noget i filen swimmer_times.txt
    public void editKonkResult() throws FileNotFoundException{
    
+      //her skal du skrive det navn du skal ændre i
       Scanner s3 = new Scanner(file3);
       System.out.println("Type the full name you want to edit");
       String name = s.nextLine();
       
       
       ArrayList<String> person = new ArrayList<String>();
-      
+      //hvis den møder navnet begynder den at lægge linjerne ind i arraylisten inttil den igen møder en linje med ":"
       while(s3.hasNextLine()){
          String linje = s3.nextLine();
          if(linje.equals(name)){
@@ -51,10 +55,14 @@ public class Coach extends Employee{
          }
       }
       
+      //printer den persons information ud
       for(int h = 0; h<person.size();h++){ 
          System.out.println(person.get(h));
       }
       
+      //her skal du vælge om du vil opdatere et træningsresultat eller putte en ny træningstid ind
+      //hvis du vælger opdater skal du skrive den diciplin og tid også kan du ændre linjen
+      //hvis du vælger ny træningstid skal du skrive diciplinen og længen og tid også kommer det ind i filen under navnet
       System.out.println("\nType 1 for opdate training time or type 2 for add new training time or competition");
       int k = s.nextInt();
       if(k == 1){
@@ -83,6 +91,8 @@ public class Coach extends Employee{
          person.set((f-1), secondSpllit[0] + "," + secondSpllit[1]); 
          
       }
+      //hvis du vælger ny træningstid kommer det som ny linje i toppen af filen
+      //hvis du vælger ny konkurence tid kommer det som en ny linje i buden af personen
       else if(k ==2){
          System.out.println("Type 1 for new traning time and 2 for competition time");
          int l = s.nextInt();
@@ -110,7 +120,8 @@ public class Coach extends Employee{
       }
       
       s3.close();
-      ////
+      
+      //printer til fillen
       Scanner ss3 = new Scanner(file3);
       ArrayList<String> slut = new ArrayList<String>();
       
@@ -147,6 +158,7 @@ public class Coach extends Employee{
       }
    }
    
+   //metode som viser de 5 med den lavets tid indefor den diciplin og længde du skriver
    public void topFem() throws FileNotFoundException{
       
       //vælger dicipin

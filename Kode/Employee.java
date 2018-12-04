@@ -7,7 +7,7 @@ public class Employee {
    File file1 = new File("konkurrence_swimmer.txt");
    File file2 = new File("swimmer.txt");
 
-
+   //metode som scanner filerne swimmer.txt og konkurrence_swimmer.txt ligger dem i en array liste og printer dem ud
    public void seMedlemmer() throws FileNotFoundException{
       ArrayList<String> medlemmer = new ArrayList<String>();
       Scanner s1 = new Scanner(file1);
