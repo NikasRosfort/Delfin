@@ -20,7 +20,8 @@ c
 bryst 100m,800
 :
 d
-bryst 100m,78
+ryg 200m,22.33
+bryst 100m,55.55
 :
 bob
 :
