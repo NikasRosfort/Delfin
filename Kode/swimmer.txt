@@ -1,5 +1,3 @@
-b,a,a,1,activ
-c,a,a,1,activ
 d,a,a,1,activ
 e,a,a,1,activ
 f,a,a,1,activ

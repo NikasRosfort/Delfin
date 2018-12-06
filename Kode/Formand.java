@@ -186,6 +186,12 @@ public class Formand extends Employee{
       String name = s.nextLine();
       int i = 0;
       
+      System.out.println("Are you sure?");
+      String yn = s.next();
+      if(yn.equals("no")){
+         System.out.println("No update was made");
+      }
+      else if(yn.equals("yes")){
       while(s2.hasNextLine()){
          i++;
          String placeholder = s2.nextLine();
@@ -256,7 +262,7 @@ public class Formand extends Employee{
          outPrint111.println(PAL.get(l));
       }
    
-   
+   }
    
    }
 
@@ -267,6 +273,12 @@ public class Formand extends Employee{
       String name = s.nextLine();
       int i = 0;
       
+      System.out.println("Are you sure?");
+      String yn = s.next();
+      if(yn.equals("no")){
+         System.out.println("No update was made");
+      }
+      else if(yn.equals("yes")){
       while(s1.hasNextLine()){
          i++;
          String placeholder = s1.nextLine();
@@ -343,7 +355,7 @@ public class Formand extends Employee{
    
    }
 
-   
+   }
    
    
    
