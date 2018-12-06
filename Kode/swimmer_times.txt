@@ -8,20 +8,7 @@ by,bryst 200m,1. plads,0.0
 peter
 bryst 100m,1.1
 :
-a
-bryst 400m,33.23
-bryst 100m,2.2
-roskilde open,bryst 200m,0.0,3. plads,
-:
-b
-bryst 100m,393.9
-:
 c
 bryst 100m,800
-:
-d
-ryg 200m,22.33
-bryst 100m,55.55
-:
 bob
 :

@@ -192,77 +192,77 @@ public class Formand extends Employee{
          System.out.println("No update was made");
       }
       else if(yn.equals("yes")){
-      while(s2.hasNextLine()){
-         i++;
-         String placeholder = s2.nextLine();
-      }
-      String[] medList = new String[i];
-      s2.close();
+         while(s2.hasNextLine()){
+            i++;
+            String placeholder = s2.nextLine();
+         }
+         String[] medList = new String[i];
+         s2.close();
       
-      Scanner ss2 = new Scanner(file2);
+         Scanner ss2 = new Scanner(file2);
       
-      for(int p = 0; p<medList.length; p++){
-         medList[p] = ss2.nextLine();
-      }
-      ss2.close();
+         for(int p = 0; p<medList.length; p++){
+            medList[p] = ss2.nextLine();
+         }
+         ss2.close();
       
       //Den splitter linjerne op og tester om navnet passer
       //så splitter den den rigtig linje op igen 
       //og sletter så den rigtigt linje
-      int f = 1;
-      for(int q = 0; q<medList.length; q++){
-         String firstSpllit[] = medList[q].split(",");  
-         if(firstSpllit[0].equals(name)){
-            break;  
+         int f = 1;
+         for(int q = 0; q<medList.length; q++){
+            String firstSpllit[] = medList[q].split(",");  
+            if(firstSpllit[0].equals(name)){
+               break;  
+            }
+            else{
+               f++;
+            }
          }
-         else{
-            f++;
+      
+         ArrayList<String> tester = new ArrayList<String>();
+      
+         for(int z = 0; z<medList.length; z++){
+            tester.add(medList[z]);
          }
-      }
       
-      ArrayList<String> tester = new ArrayList<String>();
+         tester.remove((f-1));
       
-      for(int z = 0; z<medList.length; z++){
-         tester.add(medList[z]);
-      }
-      
-      tester.remove((f-1));
-      
-      PrintStream outPrint11 = new PrintStream(file2); 
-      for(int l = 0; l<tester.size(); l++){
-         outPrint11.println(tester.get(l));
-      }
+         PrintStream outPrint11 = new PrintStream(file2); 
+         for(int l = 0; l<tester.size(); l++){
+            outPrint11.println(tester.get(l));
+         }
       
       //henter fra file4 aka kontigent.txt
       //lægger i et array
-      Scanner s4 = new Scanner(file4);
-      String[] pengeList = new String[i];
-      s4.close();
+         Scanner s4 = new Scanner(file4);
+         String[] pengeList = new String[i];
+         s4.close();
       
-      Scanner ss4 = new Scanner(file4);
+         Scanner ss4 = new Scanner(file4);
       
-      for(int p = 0; p<pengeList.length; p++){
-         pengeList[p] = ss4.nextLine();
-      }
-      ss4.close();
-   
+         for(int p = 0; p<pengeList.length; p++){
+            pengeList[p] = ss4.nextLine();
+         }
+         ss4.close();
+      
       //laver det om til en arrayList
-      ArrayList<String> PAL = new ArrayList<String>();
+         ArrayList<String> PAL = new ArrayList<String>();
       
-      for(int z = 0; z<pengeList.length; z++){
-         PAL.add(pengeList[z]);
-      }
+         for(int z = 0; z<pengeList.length; z++){
+            PAL.add(pengeList[z]);
+         }
       
       //fjerner den valgte fra arrayListen
-      PAL.remove((f-1));
+         PAL.remove((f-1));
       
       //printer et ind igeni file4
-      PrintStream outPrint111 = new PrintStream(file4); 
-      for(int l = 0; l<PAL.size(); l++){
-         outPrint111.println(PAL.get(l));
+         PrintStream outPrint111 = new PrintStream(file4); 
+         for(int l = 0; l<PAL.size(); l++){
+            outPrint111.println(PAL.get(l));
+         }
+      
       }
-   
-   }
    
    }
 
@@ -279,82 +279,144 @@ public class Formand extends Employee{
          System.out.println("No update was made");
       }
       else if(yn.equals("yes")){
-      while(s1.hasNextLine()){
-         i++;
-         String placeholder = s1.nextLine();
-      }
-      String[] medList = new String[i];
-      s1.close();
+         while(s1.hasNextLine()){
+            i++;
+            String placeholder = s1.nextLine();
+         }
+         String[] medList = new String[i];
+         s1.close();
       
-      Scanner ss1 = new Scanner(file1);
+         Scanner ss1 = new Scanner(file1);
       
-      for(int p = 0; p<medList.length; p++){
-         medList[p] = ss1.nextLine();
-      }
-      ss1.close();
+         for(int p = 0; p<medList.length; p++){
+            medList[p] = ss1.nextLine();
+         }
+         ss1.close();
       
       //Den splitter linjerne op og tester om navnet passer
       //så splitter den den rigtig linje op igen 
       //og sletter så den rigtige linje
-      int f = 1;
-      for(int q = 0; q<medList.length; q++){
-         String firstSpllit[] = medList[q].split(",");  
-         if(firstSpllit[0].equals(name)){
-            break;  
+         int f = 1;
+         for(int q = 0; q<medList.length; q++){
+            String firstSpllit[] = medList[q].split(",");  
+            if(firstSpllit[0].equals(name)){
+               break;  
+            }
+            else{
+               f++;
+            }
          }
-         else{
-            f++;
+      
+         ArrayList<String> tester = new ArrayList<String>();
+      
+         for(int z = 0; z<medList.length; z++){
+            tester.add(medList[z]);
          }
-      }
       
-      ArrayList<String> tester = new ArrayList<String>();
+         tester.remove((f-1));
       
-      for(int z = 0; z<medList.length; z++){
-         tester.add(medList[z]);
-      }
+         PrintStream outPrint11 = new PrintStream(file1); 
+         for(int l = 0; l<tester.size(); l++){
+            outPrint11.println(tester.get(l));
+         }
       
-      tester.remove((f-1));
       
-      PrintStream outPrint11 = new PrintStream(file1); 
-      for(int l = 0; l<tester.size(); l++){
-         outPrint11.println(tester.get(l));
-      }
-   
-   
       //henter fra file5 aka kontigentKonk.txt
       //lægger i et array
-      Scanner s5 = new Scanner(file5);
-   
-      String[] pengeList = new String[i];
-      s5.close();
+         Scanner s5 = new Scanner(file5);
       
-      Scanner ss5 = new Scanner(file5);
+         String[] pengeList = new String[i];
+         s5.close();
       
-      for(int p = 0; p<pengeList.length; p++){
-         pengeList[p] = ss5.nextLine();
-      }
-      ss5.close();
-   
+         Scanner ss5 = new Scanner(file5);
+      
+         for(int p = 0; p<pengeList.length; p++){
+            pengeList[p] = ss5.nextLine();
+         }
+         ss5.close();
+      
       //laver det om til en arrayList
-      ArrayList<String> PAL = new ArrayList<String>();
+         ArrayList<String> PAL = new ArrayList<String>();
       
-      for(int z = 0; z<pengeList.length; z++){
-         PAL.add(pengeList[z]);
-      }
+         for(int z = 0; z<pengeList.length; z++){
+            PAL.add(pengeList[z]);
+         }
       
       //fjerner den valgte fra arrayListen
-      PAL.remove((f-1));
+         PAL.remove((f-1));
       
       //printer et ind igen i file5
-      PrintStream outPrint111 = new PrintStream(file5); 
-      for(int l = 0; l<PAL.size(); l++){
-         outPrint111.println(PAL.get(l));
+         PrintStream outPrint111 = new PrintStream(file5); 
+         for(int l = 0; l<PAL.size(); l++){
+            outPrint111.println(PAL.get(l));
+         }
+      
+      
+      //------------------------------------------------------------------
+      
+      //her skal du skrive det navn du skal ændre i
+         Scanner s3 = new Scanner(file3);
+      
+         ArrayList<String> person = new ArrayList<String>();
+      //hvis den møder navnet begynder den at lægge linjerne ind i arraylisten inttil den igen møder en linje med ":"
+         while(s3.hasNextLine()){
+            String linje = s3.nextLine();
+            if(linje.equals(name)){
+               while(s3.hasNextLine()){
+                  String linje2 = s3.nextLine();
+                  if(linje2.equals(":")){
+                     break;
+                  }
+                  else{
+                     person.add(linje2);
+                  }
+               }
+            
+            }
+         }
+               
+      //printer til fillen
+         Scanner ss3 = new Scanner(file3);
+         ArrayList<String> slut = new ArrayList<String>();
+      
+         int gg = 0;
+         int ggg = 0;
+         int gggg = 0;
+         while(ss3.hasNextLine()){
+            String linje3 = ss3.nextLine();
+            if(gggg == 0){
+               gg++;
+            }
+            if(linje3.equals(name)){
+               ggg = 1;
+               gggg = 1;
+            }
+            else if(linje3.equals(":")){
+               slut.add(":");
+               ggg = 0;
+            }
+            else if(ggg == 0){
+               slut.add(linje3);
+            }
+         }
+         
+         slut.remove((gg-1));
+      
+         PrintStream outPrint = new PrintStream(file3);
+         for(int u = 0; u<slut.size(); u++){
+            outPrint.println(slut.get(u));
+         }
+      
+      
+      //------------------------------------------------------------------
+      
+      
+      
+      
+      
+      
       }
    
-   
-   
-   }
-
    }
    
    
