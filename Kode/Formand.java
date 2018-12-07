@@ -351,9 +351,6 @@ public class Formand extends Employee{
             outPrint111.println(PAL.get(l));
          }
       
-      
-      //------------------------------------------------------------------
-      
       //her skal du skrive det navn du skal ændre i
          Scanner s3 = new Scanner(file3);
       
@@ -400,20 +397,13 @@ public class Formand extends Employee{
             }
          }
          
+         //slet ":" som høre til navnet du sletter
          slut.remove((gg-1));
       
          PrintStream outPrint = new PrintStream(file3);
          for(int u = 0; u<slut.size(); u++){
             outPrint.println(slut.get(u));
          }
-      
-      
-      //------------------------------------------------------------------
-      
-      
-      
-      
-      
       
       }
    
