@@ -1,14 +1,26 @@
-Jesper ravn
-bryst 100m,0.0
-bryst 200m,0.0
-ryg 400m,0.0
-by,bryst 200m,1. plads,0.0
-by,bryst 200m,1. plads,0.0
+trine drejer
+bryst 200m,78.5
+ryg 400m,45.23
+roskilde open,bryst 200m,1. plads,87.45,
+viby,ryg 200m,9. plads,140.33,
 :
-peter
-bryst 100m,1.1
+adam jenesn
+ryg 400m,64.32
+bryst 200m,60.47
+roskilde open,ryg 200m,3. plads,87.09,
 :
-c
-bryst 100m,800
-bob
+mikkel mikkelsen
+bryst 200m,43.5
+ejby open,crawl 200m,3. plads,76.43,
+:
+merle
+bryst 200m,22.05
+ejby open,bryst 200m,1. plads,400.76,
+:
+helene viborg
+bryst 200m,100.01
+:
+gitte sofie gitsen
+bryst 200m,100.40
+ryg 200m,98.57
 :

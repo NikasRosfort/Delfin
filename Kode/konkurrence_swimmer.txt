@@ -1,2 +1,6 @@
-c,a,a,1
-f,a,a,1
+trine drejer,22/07/1982,loketaod@hotmail.com,31209302
+adam jenesn,09/08/1999,mail@mail.com,99999999
+mikkel mikkelsen,12/12/1912,mads@mail.dk,87679875
+merle,22/07/1982,loketaod@hotmail.com,31209302
+helene viborg,09/08/1999,mail@mail.com,99999999
+gitte sofie gitsen,12/12/1912,mads@mail.dk,87679875
